@@ -73,7 +73,7 @@ as_tibble(ez)
 names(ez)
 modelo = (lm(log(uclms) ~ feb + mar + apr + may+ jun + jul + aug + sep + oct + nov + dec, data=ez))
 
-#exercicio c6 
+#exercicio c6: detrending
 
 fertility = read.dta("C:\\Users\\vinic\\Desktop\\R\\heiss\\data_wooldridge\\FERTIL3.DTA")
 
@@ -96,7 +96,7 @@ summary(lm(gfr ~ t + tsq + t_3 + ww2 + pe + pill , data=fertility)) #é significa
 consumption = read.dta("C:\\Users\\vinic\\Desktop\\R\\heiss\\data_wooldridge\\CONSUMP.dta")
 names(consumption)
 head(consumption)
-summary(lm(log(gc) ~ log(gy), data=consumption)) #nao sei qual variavel usar
+summary(lm(gc ~ gy, data=consumption)) #nao sei qual variavel usar
 
 
 
